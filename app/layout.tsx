@@ -11,10 +11,10 @@ const poppins = Poppins({
  });
 
 export const metadata: Metadata = {
-  title: "LombokLive",
+  title: "Lombok Live",
   description: "A platform for finding events in Kuta, Lombok!",
   icons: {
-    icon: '/assets/images/logo.svg'
+    icon: '/assets/images/logo.png'
   }
 };
 

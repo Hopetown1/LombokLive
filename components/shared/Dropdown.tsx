@@ -62,8 +62,8 @@ const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
         ))}
 
         <AlertDialog>
-          <AlertDialogTrigger className="p-medium-14 flex w-full rounded-sm py-3 pl-8 text-primary-500 hover:bg-primary-50 focus:text-primary-500">Add new category</AlertDialogTrigger>
-          <AlertDialogContent className="bg-white">
+          <AlertDialogTrigger className="p-medium-14 flex w-full rounded-sm py-3 pl-8 text-[#FF7F50] hover:bg-[#F4E1C1]  focus:text-[#FF7F50]">Add new category</AlertDialogTrigger>
+          <AlertDialogContent className="bg-[#FFF9EE] ">
             <AlertDialogHeader>
               <AlertDialogTitle>New Category</AlertDialogTitle>
               <AlertDialogDescription>
