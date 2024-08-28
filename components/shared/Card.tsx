@@ -19,14 +19,23 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
   const isEventCreator = userId === event.organizer._id.toString();
 
   return (
-    <div className="group relative flex min-h-[380px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-[#F8EFE0] shadow-md transition-all hover:shadow-lg md:min-h-[438px]">
+    <div className="group relative flex w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-[#F8EFE0] shadow-md transition-all hover:shadow-lg">
       <Link 
         href={`/events/${event._id}`}
-        style={{backgroundImage: `url(${event.imageUrl})`}}
-        className="flex-center flex-grow bg-gray-50 bg-cover bg-center text-grey-500"
-      />
-      {/* IS EVENT CREATOR ... */}
-
+        className="w-full overflow-hidden"
+      >
+        <div className="relative w-full">
+          <Image 
+            src={event.imageUrl}
+            alt={event.title}
+            width={400}
+            height={200}
+            layout="responsive"
+            className="transition-all group-hover:scale-105"
+          />
+        </div>
+      </Link>
+      
       {isEventCreator && !hidePrice && (
         <div className="absolute right-2 top-2 flex flex-col gap-4 rounded-xl bg-[#FFF9EE] p-3 shadow-sm transition-all">
           <Link href={`/events/${event._id}/update`}>
@@ -37,10 +46,8 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
         </div>
       )}
 
-      <div
-        className="flex min-h-[230px] flex-col gap-3 p-5 md:gap-4"
-      > 
-       {!hidePrice && <div className="flex gap-2">
+      <div className="flex flex-col gap-3 p-5 md:gap-4"> 
+        {!hidePrice && <div className="flex gap-2">
           <span className="p-semibold-14 w-min rounded-full bg-green-100 px-4 py-1 text-[#8B4513]">
             {event.isFree ? 'FREE' : `$${event.price}`}
           </span>
