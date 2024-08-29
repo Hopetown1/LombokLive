@@ -10,13 +10,7 @@ const poppins = Poppins({
   variable: '--font-poppins',
  });
 
-export const metadata: Metadata = {
-  title: "LombokLive",
-  description: "A platform for finding events in Kuta, Lombok!",
-  icons: {
-    icon: '/assets/images/logo.svg'
-  }
-};
+
 
 export default function RootLayout({
   children,

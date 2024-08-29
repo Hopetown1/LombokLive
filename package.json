@@ -33,6 +33,7 @@
     "react-datepicker": "^7.3.0",
     "react-dom": "^18",
     "react-hook-form": "^7.52.2",
+    "sharp": "^0.33.5",
     "stripe": "^16.8.0",
     "svix": "^1.30.0",
     "tailwind-merge": "^2.5.2",

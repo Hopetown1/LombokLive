@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "Lombok Live",
   description: "A platform for finding events in Kuta, Lombok!",
   icons: [
-    { rel: 'icon', url: '/icon_LL', type: 'image/png' },
+    { rel: 'icon', url: '/icon_LL.png', type: 'image/png' },
     ]
 };
 
