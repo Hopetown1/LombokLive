@@ -41,7 +41,7 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
                 </p>
               </div>
 
-              <p className="p-medium-18 ml-2 mt-2 sm:mt-0">
+              <p className="p-medium-18 ml-2 mt-2 sm:mt-0 hidden">
                 by{' '}
                 <span className="text-primary-500">{event.organizer.firstName} {event.organizer.lastName}</span>
               </p>
@@ -53,7 +53,7 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
           <div className="flex flex-col gap-5">
             <div className='flex gap-2 md:gap-3'>
               <Image src="/assets/icons/calendar.svg" alt="calendar" width={32} height={32} />
-              <div className="p-medium-16 lg:p-regular-20 flex flex-wrap items-center">
+              <div className="p-medium-16 lg:p-regular-20 flex-wrap items-center hidden">
                 <p>
                   {formatDateTime(event.startDateTime).dateOnly} - {' '}
                   {formatDateTime(event.startDateTime).timeOnly}
@@ -82,7 +82,7 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
 
     {/* EVENTS with the same category */}
     <section className="wrapper my-8 flex flex-col gap-8 md:gap-12">
-      <h2 className="h2-bold">Related Events</h2>
+      <h2 className="h2-bold text-[#008080]">Related Events</h2>
 
       <Collection 
           data={relatedEvents?.data}
